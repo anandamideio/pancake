@@ -162,7 +162,15 @@ class FixedDequeue {
     return this.count - this.lowestCount === 0; // Returns true if empty and false otherwise
   }
 
+  isFull() {
+    return this.size() === this.maxCount;
+  }
+
   size() {
+    return this.count - this.lowestCount;
+  }
+
+  length() {
     return this.count - this.lowestCount;
   }
 

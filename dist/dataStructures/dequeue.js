@@ -109,6 +109,10 @@ class Dequeue {
     return this.count - this.lowestCount;
   }
 
+  length() {
+    return this.count - this.lowestCount;
+  }
+
   clear() {
     this.items = {};
     this.count = 0;

@@ -28,7 +28,7 @@ describe('ArrayStack', function() {
 describe('ArrayStack', function() {
   describe('#pop()', function () {
     it('Removes an element from the front of the stack', function () {
-      stack.remove();
+      stack.pop();
       assert.strictEqual(stack.peek(), 1)
     })
   })

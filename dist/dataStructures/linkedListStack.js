@@ -1,6 +1,6 @@
 'use strict';
 
-const DoublyLinkedList = require('./doublyLinkedList');
+const {DoublyLinkedList} = require('./doublyLinkedList');
 
 class LinkedListStack{
   constructor() {

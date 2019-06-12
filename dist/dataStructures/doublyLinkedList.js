@@ -10,7 +10,6 @@ class DoublyNode extends Node{
     this.prev = prev;
   }
 }
-module.exports.DoublyNode = DoublyNode;
 
 class DoublyLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
@@ -109,9 +108,7 @@ class DoublyLinkedList extends LinkedList {
   }
 
   inverseToString() {
-    if (this.tail == null) {
-      return '';
-    }
+    if (this.tail == null) { return ''; }
     let objString = `${this.tail.element}`;
     let previous = this.tail.prev;
     while (previous != null) {
