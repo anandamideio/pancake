@@ -11,7 +11,7 @@ Data-Structures Included:
 * Dequeue
 * Fixed Dequeue
 * SingleyLinkedList
-* DoubleyLinkedList
+* DoublyLinkedList
 * CircularLinkedList
 * Set
 * Dictionary
