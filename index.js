@@ -15,6 +15,7 @@ const CircularLinkedList = require('./dist/dataStructures/circularLinkList');
 const LinkedListStack = require('./dist/dataStructures/linkedListStack');
 const Set = require('./dist/dataStructures/set');
 const Dictionary = require('./dist/dataStructures/dictionary');
+const HashTable = require('./dist/dataStructures/hashTable');
 
 module.exports.util = util;
 module.exports.Queue = Queue;
@@ -30,3 +31,4 @@ module.exports.CircularLinkedList = CircularLinkedList;
 module.exports.LinkedListStack = LinkedListStack;
 module.exports.Set = Set;
 module.exports.Dictionary = Dictionary;
+module.exports.HashTable = HashTable;
