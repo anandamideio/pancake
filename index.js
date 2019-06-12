@@ -10,6 +10,7 @@ const ArrayStack = require('./dist/dataStructures/arrayStack');
 const Stack = require('./dist/dataStructures/stack');
 const LinkedList = require('./dist/dataStructures/linkedList');
 const DoublyLinkedList = require('./dist/dataStructures/doublyLinkedList');
+const DoublyNode = require('./dist/dataStructures/doublyLinkedList');
 const CircularLinkedList = require('./dist/dataStructures/circularLinkList');
 const LinkedListStack = require('./dist/dataStructures/linkedListStack');
 const Set = require('./dist/dataStructures/set');

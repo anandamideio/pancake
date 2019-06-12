@@ -79,13 +79,11 @@ class LinkedList {
     if (index >= 0 && index <= this.count) {
       const node = new Node(element);
       if (index === 0) {
-        const current = this.head;
-        node.next = current;
+        node.next = this.head;
         this.head = node;
       } else {
         const previous = this.getElementAt(index - 1);
-        const current = previous.next;
-        node.next = current;
+        node.next = previous.next;
         previous.next = node;
       }
       this.count += 1;
@@ -94,28 +92,35 @@ class LinkedList {
     return false;
   }
 
-  indexOf(element) {
-    let current = this.head;
-    for (let i = 0; i < this.count && current != null; i++) {
-      if (this.equalsFn(element, current.element)) {
-        return i;
+  insertAfter(target, value){
+    const node = new Node(value);
+    let currentNode = this.head;
+    while (currentNode){
+      if (currentNode.element === target){
+        node.next = currentNode.next;
+        currentNode.next = node;
+        break;
       }
-      current = current.next;
+      currentNode = currentNode.next;
+    }
+    this.count += 1;
+  }
+
+  indexOf(element){
+    let currentNode = this.head, index = 0;
+    while (currentNode.next){
+      if (currentNode.element === element){ return index; }
+      index += 1;
+      currentNode = currentNode.next;
     }
     return -1;
   }
 
-  size() {
-    return this.count;
-  };
+  size() { return this.count; };
 
-  isEmpty() {
-    return this.size === 0;
-  };
+  isEmpty() { return this.count === 0; };
 
-  getHead() {
-    return this.head;
-  }
+  getHead() { return this.head; }
 
   toTable() {
     const table = {};
@@ -158,6 +163,35 @@ class LinkedList {
       tempArray.push(itNode.element)
     }
     return tempArray;
+  }
+
+  removeDupes(){
+    const record = {};
+    let check = this.head,
+      previous = undefined;
+    while (check){
+      if (record[check.element]){
+        previous.next = check.next;
+        this.count -= 1;
+      } else {
+        record[check.element] = true;
+        previous = check;
+      }
+      check = check.next;
+    }
+  }
+
+  invert(){
+    let currentNode = this.head, // <--Start at the head-<
+      previousNode = undefined;
+    while (currentNode){
+      const next = currentNode.next; // <--The loop looks ahead at the next pointer-<
+      currentNode.next = previousNode; // <--On first itt. the head's 'next' is rereferenced to NULL, and what was the head will be passed forward to be the next rereference point-<
+      if (!next) break; // <--If next is pointing to NULL, we know to not go there-<
+      previousNode = currentNode;
+      currentNode = next;
+    }
+    this.head = currentNode;
   }
 
   forEach(callback, scope) {
