@@ -17,6 +17,8 @@ const Set = require('./dist/dataStructures/set');
 const Dictionary = require('./dist/dataStructures/dictionary');
 const HashTable = require('./dist/dataStructures/hashTable');
 const HashTableSeparateChaining = require('./dist/dataStructures/hashTableSeperateChaining');
+const HashTableLinearProbing = require('./dist/dataStructures/hashTableLinearProbing');
+const HashTableLinearProbingLazy = require('./dist/dataStructures/hashTableLinearProbingLazy');
 
 module.exports.util = util;
 module.exports.Queue = Queue;
@@ -34,3 +36,5 @@ module.exports.Set = Set;
 module.exports.Dictionary = Dictionary;
 module.exports.HashTable = HashTable;
 module.exports.HashTableSeparateChaining = HashTableSeparateChaining;
+module.exports.HashTableLinearProbing = HashTableLinearProbing;
+module.exports.HashTableLinearProbingLazy = HashTableLinearProbingLazy;

@@ -10,20 +10,17 @@ class HashTableSeparateChaining {
     this.table = {};
   }
 
-  loseloseHashCode(key) {
-    if (typeof key === 'number') {
-      return key;
-    }
+  djb2HashCode(key) {
     const tableKey = this.toStrFn(key);
-    let hash = 0;
+    let hash = 5381;
     for (let i = 0; i < tableKey.length; i++) {
-      hash += tableKey.charCodeAt(i);
+      hash = (hash * 33) + tableKey.charCodeAt(i);
     }
-    return hash % 37;
+    return hash % 1013;
   }
 
   hashCode(key) {
-    return this.loseloseHashCode(key);
+    return this.djb2HashCode(key);
   }
 
   put(key, value) {
