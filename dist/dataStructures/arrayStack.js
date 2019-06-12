@@ -3,44 +3,56 @@ exports.__esModule = true;
 
 class ArrayStack {
   constructor() {
-    this.cards = [];
+    this.items = [];
   }
 
   push(element) {
-    this.cards.push(element);
+    this.items.push(element);
   };
+
+  add(element) {
+    this.items.push(element);
+  }
 
   pop() {
-    return this.cards.pop();
+    return this.items.pop();
   };
 
+  remove() {
+    return this.items.pop();
+  }
+
   peek() {
-    return this.cards[this.cards.length - 1];
+    return this.items[this.items.length - 1];
   };
 
   scry() {
-    return this.cards[this.cards.length - 1];
+    return this.items[this.items.length - 1];
   };
 
   isEmpty() {
-    return this.cards.length === 0;
+    return this.items.length === 0;
   };
 
   size() {
-    return this.cards.length;
+    return this.items.length;
   };
 
+  length() {
+    return this.items.length;
+  }
+
   clear() {
-    this.cards = [];
+    this.items = [];
   };
 
   toArray() {
-    return this.cards;
+    return this.items;
   };
 
   toString() {
-    return this.cards.toString();
+    return this.items.toString();
   };
 
 }
-exports["default"] = ArrayStack;
+module.exports.ArrayStack = ArrayStack;

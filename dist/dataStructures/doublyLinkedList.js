@@ -121,4 +121,4 @@ class DoublyLinkedList extends LinkedList {
     return objString;
   }
 }
-module.exports.DoubleyLinkedList = DoublyLinkedList;
+module.exports.DoublyLinkedList = DoublyLinkedList;
