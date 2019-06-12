@@ -79,13 +79,11 @@ class LinkedList {
     if (index >= 0 && index <= this.count) {
       const node = new Node(element);
       if (index === 0) {
-        const current = this.head;
-        node.next = current;
+        node.next = this.head;
         this.head = node;
       } else {
         const previous = this.getElementAt(index - 1);
-        const current = previous.next;
-        node.next = current;
+        node.next = previous.next;
         previous.next = node;
       }
       this.count += 1;
@@ -105,17 +103,11 @@ class LinkedList {
     return -1;
   }
 
-  size() {
-    return this.count;
-  };
+  size() { return this.count; };
 
-  isEmpty() {
-    return this.size === 0;
-  };
+  isEmpty() { return this.size === 0; };
 
-  getHead() {
-    return this.head;
-  }
+  getHead() { return this.head; }
 
   toTable() {
     const table = {};
@@ -155,6 +147,35 @@ class LinkedList {
     return tempArray;
   }
 
+  dropDupes(){
+    const record = {};
+    let check = this.head,
+      previous = null;
+    while (check){
+      if (record[check.element]){
+        previous.next = check.next;
+        this.count -= 1;
+      } else {
+        record[check.element] = true;
+        previous = check;
+      }
+      check = check.next;
+    }
+  }
+
+  invert(){
+    let currentNode = this.head, // <--Start at the head-<
+      previousNode = null;
+    while (currentNode){
+      const next = currentNode.next; // <--The loop looks ahead at the next pointer-<
+      currentNode.next = previousNode; // <--On first itt. the head's 'next' is rereferenced to NULL, and what was the head will be passed forward to be the next rereference point-<
+      if (!next) break; // <--If next is pointing to NULL, we know to not go there-<
+      previousNode = currentNode;
+      currentNode = next;
+    }
+    this.head = currentNode;
+  }
+
   forEach(callback, scope) {
     if (typeof callback !== 'function') {throw new TypeError((callback + ' is not a function'))}
     let listObject = Object(this.toArray()); // Assign the results of 'this' to List Object
@@ -174,3 +195,21 @@ class LinkedList {
 }
 
 module.exports.LinkedList = LinkedList;
+
+const stuff = ['Arrow', 'Bow', 'Cheese', 'Duck',];
+const linksList = new LinkedList();
+
+stuff.forEach(item=>{linksList.push(item)});
+console.table(linksList.toTable());
+
+stuff.forEach(item=>{linksList.push(item)});
+console.table(linksList.toTable());
+
+linksList.insert('Boomerang', 3);
+console.table(linksList.toTable());
+
+linksList.dropDupes();
+console.table(linksList.toTable());
+
+linksList.invert();
+console.table(linksList.toTable());
