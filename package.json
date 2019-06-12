@@ -1,12 +1,15 @@
 {
   "name": "pancake",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modern Data Structures for JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["data-structure", "data structure", "data", "linked list", "hash table", "stacks", "queues"],
+  "authors": {
+    "Author": "Antonio Bourassa - Abourass - https://github.com/Abourass",
+    "Co-Author": "Kyle Hagadorn - KyleHagad - https://github.com/KyleHagad"
+  },
+  "license": "GNU GPLv3"
 }
