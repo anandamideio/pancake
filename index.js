@@ -16,6 +16,7 @@ const LinkedListStack = require('./dist/dataStructures/linkedListStack');
 const Set = require('./dist/dataStructures/set');
 const Dictionary = require('./dist/dataStructures/dictionary');
 const HashTable = require('./dist/dataStructures/hashTable');
+const HashTableSeperateChainging = require('./dist/dataStructures/hashTableSeperateChaining');
 
 module.exports.util = util;
 module.exports.Queue = Queue;
@@ -32,3 +33,4 @@ module.exports.LinkedListStack = LinkedListStack;
 module.exports.Set = Set;
 module.exports.Dictionary = Dictionary;
 module.exports.HashTable = HashTable;
+module.exports.HashTableSeperateChaining = HashTableSeperateChainging;
