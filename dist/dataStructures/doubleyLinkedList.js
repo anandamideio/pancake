@@ -63,6 +63,22 @@ class DoublyLinkedList extends LinkedList {
     return false
   }
 
+  insertAfter(target, value){
+    const node = new DoublyNode(value);
+    let currentNode = this.head;
+    while (currentNode){
+      if (currentNode.element === target){
+        currentNode.next.prev = node;
+        node.next = currentNode.next;
+        currentNode.next = node;
+        node.prev = currentNode;
+        break;
+      }
+      currentNode = currentNode.next;
+    }
+    this.count += 1;
+  }
+
   removeAt(index) {
     if (index >= 0 && index < this.count) {
       let current = this.head;
@@ -89,15 +105,22 @@ class DoublyLinkedList extends LinkedList {
     return undefined;
   }
 
-  indexOf(element) {
-    let current = this.head, index = 0;
-    while (current != null) {
-      if (this.equalsFn(element, current.element)) { return index; }
-      index += 1;
-      current = current.next;
+  removeDupes(){
+    const record = {};
+    let check = this.head,
+      previousNode = undefined;
+    while (check){
+      if (record[check.element]){
+        previousNode.next.prev = check.prev;
+        previousNode.next = check.next;
+        this.count -= 1;
+      } else {
+        record[check.element] = true;
+        previousNode = check;
+      }
+      check = check.next;
     }
-    return -1;
-  };
+  }
 
   getTail() {
     return this.tail;
@@ -106,6 +129,21 @@ class DoublyLinkedList extends LinkedList {
   clear() {
     super.clear();
     this.tail = undefined;
+  }
+
+  invert(){
+    let currentNode = this.head, // <--Start at the head-<
+      previousNode = undefined;
+    while (currentNode){
+      const next = currentNode.next; // <--The loop looks ahead at the next pointer-<
+      currentNode.prev = currentNode.next;
+      currentNode.next = previousNode; // <--On first itt. the head's 'next' is rereferenced to NULL, and what was the head will be passed forward to be the next rereference point-<
+      if (!next) break; // <--If next is pointing to NULL, we know to not go there-<
+      previousNode = currentNode;
+      currentNode = next;
+    }
+    this.tail = this.head;
+    this.head = currentNode;
   }
 
   inverseToString() {
