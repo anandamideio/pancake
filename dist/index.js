@@ -14,6 +14,7 @@ const DoublyNode = require('./dataStructures/doubleyLinkedList');
 const CircularLinkedList = require('./dataStructures/circularLinkList');
 const LinkedListStack = require('./dataStructures/linkedListStack');
 const Set = require('./dataStructures/set');
+const Dictionary = require('./dataStructures/dictionary');
 
 module.exports.util = util;
 module.exports.Queue = Queue;
@@ -28,3 +29,4 @@ module.exports.DoublyNode = DoublyNode;
 module.exports.CircularLinkedList = CircularLinkedList;
 module.exports.LinkedListStack = LinkedListStack;
 module.exports.Set = Set;
+module.exports.Dictionary = Dictionary;
