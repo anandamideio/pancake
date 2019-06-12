@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const {Dequeue} = require('../dist/dataStructures/dequeue');
-const dequeue = new Dequeue(4);
+const dequeue = new Dequeue();
 
 // .shift()
 describe('Dequeue', function() {
