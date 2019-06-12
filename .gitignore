@@ -1,3 +1,5 @@
 src/
 other
 .idea/
+node_modules
+.nyc_output

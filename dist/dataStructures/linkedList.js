@@ -130,6 +130,11 @@ class LinkedList {
     return table;
   }
 
+  clear() {
+    this.head = undefined;
+    this.count = 0;
+  }
+
   toString() {
     let tempString = '';
     if (this.head != null) {

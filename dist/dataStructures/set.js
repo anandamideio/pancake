@@ -21,6 +21,14 @@ class Set {
     return false;
   }
 
+  remove() {
+    if (this.has(element)) {
+      delete this.items[element];
+      return true;
+    }
+    return false;
+  }
+
   has(element) {
     return Object.prototype.hasOwnProperty.call(this.items, element);
   }
@@ -81,14 +89,16 @@ class Set {
     return Object.keys(this.items).length;
   }
 
+  length() {
+    return Object.keys(this.items).length;
+  }
+
   clear() {
     this.items = {};
   }
 
   toString() {
-    if (this.isEmpty()) {
-      return '';
-    }
+    if (this.isEmpty()) { return '';}
     const values = this.values();
     let objString = `${values[0]}`;
     for (let i = 1; i < values.length; i++) {

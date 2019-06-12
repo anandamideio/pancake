@@ -1,6 +1,6 @@
 'use strict';
 
-const DoublyLinkedList = require('./doublyLinkedList');
+const {DoublyLinkedList} = require('./doublyLinkedList');
 
 class LinkedListStack{
   constructor() {
@@ -42,8 +42,20 @@ class LinkedListStack{
     return this.items.size();
   }
 
+  length() {
+    return this.items.size();
+  }
+
   clear() {
     this.items.clear();
+  }
+
+  toArray() {
+    let itemStore = this.items;
+    let transformer = Object.keys(this.items).map(function (key) {
+      return [Number(key), itemStore[key]]
+    });
+    return transformer;
   }
 
   toString() {
