@@ -18,6 +18,11 @@ const HashTable = require('./dist/dataStructures/hashTable');
 const HashTableSeparateChaining = require('./dist/dataStructures/hashTableSeperateChaining');
 const HashTableLinearProbing = require('./dist/dataStructures/hashTableLinearProbing');
 const HashTableLinearProbingLazy = require('./dist/dataStructures/hashTableLinearProbingLazy');
+const BinarySearchTree = require('./dist/dataStructures/binarySearchTree');
+const AVLTree = require('./dist/dataStructures/AdelsonVelskiiLandiTree');
+const RedBlackTree = require('./dist/dataStructures/redBlackTree');
+const Heap = require('./dist/dataStructures/heap');
+const Graph = require('./dist/dataStructures/graph');
 
 module.exports = {
   util,
@@ -37,5 +42,10 @@ module.exports = {
   HashTableLinearProbingLazy,
   HashTableLinearProbing,
   HashTableSeparateChaining,
-  DoublyNode
+  DoublyNode,
+  BinarySearchTree,
+  AVLTree,
+  RedBlackTree,
+  Heap,
+  Graph
 };
