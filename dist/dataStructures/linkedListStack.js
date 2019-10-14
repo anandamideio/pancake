@@ -63,4 +63,4 @@ class LinkedListStack{
   }
 }
 
-module.exports.LinkedListStack = LinkedListStack;
+module.exports = LinkedListStack;

@@ -10,4 +10,4 @@ class ValuePairLazy extends ValuePair {
     this.isDeleted = isDeleted;
   }
 }
-module.exports.ValuePairLazy = ValuePairLazy;
+module.exports = ValuePairLazy;

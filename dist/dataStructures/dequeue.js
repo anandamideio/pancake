@@ -153,4 +153,4 @@ class Dequeue {
   }
 }
 
-module.exports.Dequeue = Dequeue;
+module.exports = Dequeue;

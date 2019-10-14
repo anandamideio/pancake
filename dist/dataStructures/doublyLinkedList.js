@@ -10,7 +10,7 @@ class DoublyNode extends Node{
     this.prev = prev;
   }
 }
-module.exports.DoublyNode = DoublyNode;
+module.exports = DoublyNode;
 
 class DoublyLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
@@ -159,4 +159,4 @@ class DoublyLinkedList extends LinkedList {
     return objString;
   }
 }
-module.exports.DoubleyLinkedList = DoublyLinkedList;
+module.exports = DoublyLinkedList;

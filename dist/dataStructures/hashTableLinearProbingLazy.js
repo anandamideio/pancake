@@ -108,4 +108,4 @@ class HashTableLinearProbingLazy {
     return objString;
   }
 }
-module.exports.HashTableLinearProbingLazy = HashTableLinearProbingLazy;
+module.exports = HashTableLinearProbingLazy;

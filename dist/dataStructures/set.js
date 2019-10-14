@@ -108,4 +108,4 @@ class Set {
   }
 }
 
-module.exports.Set = Set;
+module.exports = Set;

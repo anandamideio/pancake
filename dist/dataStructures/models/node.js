@@ -11,4 +11,4 @@ class Node {
     return `${this.key}`;
   }
 }
-module.exports.Node = Node;
+module.exports = Node;

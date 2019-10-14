@@ -55,4 +55,4 @@ class ArrayStack {
   };
 
 }
-module.exports.ArrayStack = ArrayStack;
+module.exports = ArrayStack;

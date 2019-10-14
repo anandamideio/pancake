@@ -212,4 +212,4 @@ class LinkedList {
   }
 }
 
-module.exports.LinkedList = LinkedList;
+module.exports = LinkedList;

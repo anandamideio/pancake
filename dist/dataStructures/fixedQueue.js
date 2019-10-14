@@ -124,4 +124,4 @@ class FixedQueue {
   }
 }
 
-module.exports.FixedQueue = FixedQueue;
+module.exports = FixedQueue;

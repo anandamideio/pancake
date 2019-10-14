@@ -72,4 +72,4 @@ class HashTable {
     return objString;
   }
 }
-module.exports.HashTable = HashTable;
+module.exports = HashTable;

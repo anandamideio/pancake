@@ -117,4 +117,4 @@ class HashTableLinearProbing {
     return objString;
   }
 }
-module.exports.HashTableLinearProbing = HashTableLinearProbing;
+module.exports = HashTableLinearProbing;

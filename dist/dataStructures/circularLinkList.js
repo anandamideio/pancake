@@ -73,4 +73,4 @@ class CircularLinkedList extends LinkedList {
   }
 }
 
-module.exports.CircularLinkedList = CircularLinkedList;
+module.exports = CircularLinkedList;

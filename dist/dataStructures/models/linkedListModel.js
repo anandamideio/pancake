@@ -7,4 +7,4 @@ class Node {
   }
 }
 
-module.exports.Node = Node;
+module.exports = Node;

@@ -103,4 +103,4 @@ class HashTableSeparateChaining {
     return objString;
   }
 }
-module.exports.HashTableSeperateChaining = HashTableSeparateChaining;
+module.exports = HashTableSeparateChaining;

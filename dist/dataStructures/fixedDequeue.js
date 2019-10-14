@@ -211,4 +211,4 @@ class FixedDequeue {
   }
 }
 
-module.exports.FixedDequeue = FixedDequeue;
+module.exports = FixedDequeue;
