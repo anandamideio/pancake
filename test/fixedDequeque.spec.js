@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const {FixedDequeue} = require('../dist/dataStructures/fixedDequeue');
+const FixedDequeue = require('../dist/dataStructures/fixedDequeue');
 const dequeue = new FixedDequeue(4);
 
 // .shift()

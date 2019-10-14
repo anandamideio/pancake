@@ -1,8 +1,8 @@
 'use strict';
 
 const {defaultToString} = require('../util');
-const {LinkedList} = require('./linkedList');
-const {ValuePair} = require('./models/valuePair');
+const LinkedList = require('./linkedList');
+const ValuePair = require('./models/valuePair');
 
 class HashTableSeparateChaining {
   constructor(toStrFn = defaultToString) {

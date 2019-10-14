@@ -1,7 +1,7 @@
 'use strict';
 
 const {Compare, defaultCompare} = require('../util');``
-const {Node} = require('./models/node');
+const Node = require('./models/node');
 
 class BinarySearchTree {
   constructor(compareFn = defaultCompare) {

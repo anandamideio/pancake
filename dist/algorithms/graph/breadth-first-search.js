@@ -1,4 +1,4 @@
-const {Queue} = require('../../dataStructures/queue');
+const Queue = require('../../dataStructures/queue');
 
 const Colors = {
   WHITE: 0,
@@ -39,7 +39,6 @@ const breadthFirstSearch = (graph, startVertex, callback) => {
     }
   }
 };
-module.exports.breadthFirstSearch = breadthFirstSearch;
 
 const BFS = (graph, startVertex) => {
   const vertices = graph.getVertices();
@@ -73,4 +72,7 @@ const BFS = (graph, startVertex) => {
     predecessors
   };
 };
-module.exports.BFS = BFS;
+module.exports = {
+  BFS,
+  breadthFirstSearch
+};

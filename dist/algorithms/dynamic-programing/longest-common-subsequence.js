@@ -24,4 +24,4 @@ function lcs(wordX, wordY) {
   }
   return l[m][n];
 }
-module.exports.lcs = lcs;
+module.exports = lcs;

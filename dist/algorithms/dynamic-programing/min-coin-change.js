@@ -30,4 +30,4 @@ function minCoinChange(coins, amount) {
   };
   return makeChange(amount);
 }
-module.exports.minCoinChange = minCoinChange;
+module.exports = minCoinChange;

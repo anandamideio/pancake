@@ -1,7 +1,7 @@
 'use strict';
 
 const {defaultToString} = require('../util');
-const {ValuePair} = require('./models/valuePair');
+const ValuePair = require('./models/valuePair');
 
 class HashTableLinearProbing {
   constructor(toStrFn = defaultToString) {

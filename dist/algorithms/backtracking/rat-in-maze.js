@@ -39,4 +39,4 @@ function ratInAMaze(maze) {
   }
   return 'NO PATH FOUND';
 }
-module.exports.ratInAMaze = ratInAMaze;
+module.exports = ratInAMaze;

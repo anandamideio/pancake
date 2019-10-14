@@ -1,7 +1,7 @@
 'use strict';
 
-const {BinarySearchTree} = require('./binarySearchTree');
-const {Node} = require('./models/node');
+const BinarySearchTree = require('./binarySearchTree');
+const Node = require('./models/node');
 const {Compare, defaultCompare} = require('../util');
 const BalanceFactor = {
   UNBALANCED_RIGHT: 1,

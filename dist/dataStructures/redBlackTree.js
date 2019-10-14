@@ -1,8 +1,8 @@
 "use strict";
 
 const {defaultCompare} = require("../util");
-const {BinarySearchTree} = require("./binarySearchTree");
-const {redBlackNode} = require("./models/redBlackNode");
+const BinarySearchTree = require("./binarySearchTree");
+const redBlackNode = require("./models/redBlackNode");
 
 class RedBlackTree extends BinarySearchTree {
   constructor(compareFn = defaultCompare) {
@@ -158,4 +158,4 @@ class RedBlackTree extends BinarySearchTree {
   };
   getRoot() { return this.root; };
 }
-module.exports.RedBlackTree = RedBlackTree;
+module.exports = RedBlackTree;

@@ -1,7 +1,7 @@
 'use strict';
 
 const {defaultToString} = require('../util');
-const {ValuePairLazy} = require('./models/valuePairLazy');
+const ValuePairLazy = require('./models/valuePairLazy');
 
 class HashTableLinearProbingLazy {
   constructor(toStrFn = defaultToString) {

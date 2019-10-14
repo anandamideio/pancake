@@ -1,6 +1,6 @@
 'use strict';
 
-const {Dictionary} = require('./dictionary');
+const Dictionary = require('./dictionary');
 
 class Graph {
   constructor(isDirected = false) {
@@ -50,4 +50,4 @@ class Graph {
     return s;
   }
 }
-module.exports.Graph = Graph;
+module.exports = Graph;

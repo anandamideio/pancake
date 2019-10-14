@@ -82,4 +82,4 @@ const DFS = graph => {
     predecessors: p
   };
 };
-module.exports.DFS = DFS;
+module.exports = DFS;

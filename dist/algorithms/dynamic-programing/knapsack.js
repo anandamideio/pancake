@@ -39,4 +39,4 @@ function knapSack(capacity, weights, values, n) {
   findValues(n, capacity, kS);
   return kS[n][capacity];
 }
-module.exports.knapSack = knapSack;
+module.exports = knapSack;

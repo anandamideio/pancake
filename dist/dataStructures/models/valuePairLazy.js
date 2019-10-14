@@ -1,6 +1,6 @@
 'use strict';
 
-const {ValuePair} = require('./valuePair');
+const ValuePair = require('./valuePair');
 
 class ValuePairLazy extends ValuePair {
   constructor(key, value, isDeleted = false) {

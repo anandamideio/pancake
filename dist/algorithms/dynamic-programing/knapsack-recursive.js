@@ -9,4 +9,4 @@ function knapSackRecursive(capacity, weights, values, n) {
   const b = knapSack(capacity, weights, values, n - 1);
   return a > b ? a : b;
 }
-module.exports.knapSackRecurisve = knapSackRecursive;
+module.exports = knapSackRecursive;

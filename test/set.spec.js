@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const {Set} = require('../dist/dataStructures/set');
+const Set = require('../dist/dataStructures/set');
 const set = new Set();
 
 // .add()

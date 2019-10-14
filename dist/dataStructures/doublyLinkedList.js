@@ -1,8 +1,8 @@
 'use strict';
 
 const {defaultEquals} = require('../util');
-const {Node} = require('./models/linkedListModel');
-const {LinkedList} = require('./linkedList');
+const Node = require('./models/linkedListModel');
+const LinkedList = require('./linkedList');
 
 class DoublyNode extends Node{
   constructor(element, next, prev) {

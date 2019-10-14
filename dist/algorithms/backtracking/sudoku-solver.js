@@ -74,4 +74,4 @@ function sudokuSolver(matrix) {
   }
   return 'NO SOLUTION EXISTS!';
 }
-module.exports.sudokuSolver = sudokuSolver;
+module.exports = sudokuSolver;

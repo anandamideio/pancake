@@ -50,4 +50,4 @@ function lcs(wordX, wordY) {
   }
   return printSolution(solution, wordX, m, n);
 }
-module.exports.lcs = lcs;
+module.exports = lcs;

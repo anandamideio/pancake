@@ -121,4 +121,4 @@ class MaxHeap extends MinHeap {
     this.compareFn = reverseCompare(compareFn);
   }
 }
-module.exports.MaxHead = MaxHeap;
+module.exports = MaxHeap;

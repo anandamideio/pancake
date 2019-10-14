@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const {Stack} = require('../dist/dataStructures/stack');
+const Stack = require('../dist/dataStructures/stack');
 const stack = new Stack;
 
 // .push()

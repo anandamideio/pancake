@@ -1,7 +1,7 @@
 'use strict';
 
 const {defaultEquals} = require('../util');
-const {Node} = require('./models/linkedListModel');
+const Node = require('./models/linkedListModel');
 
 class LinkedList {
   constructor(equalsFn = defaultEquals) { // if no equality operator is passed then use the defaultEquals function

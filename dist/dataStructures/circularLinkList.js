@@ -1,8 +1,8 @@
 'use strict';
 
 const {defaultEquals} = require('../util');
-const {LinkedList} = require('./linkedList');
-const {Node} = require('./models/linkedListModel');
+const LinkedList = require('./linkedList');
+const Node = require('./models/linkedListModel');
 
 class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals){

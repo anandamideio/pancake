@@ -43,4 +43,4 @@ function matrixChainOrder(p) {
   printOptimalParenthesis(s, 1, n - 1);
   return m[1][n - 1];
 }
-module.exports.matrixChainOrder = matrixChainOrder;
+module.exports = matrixChainOrder;
