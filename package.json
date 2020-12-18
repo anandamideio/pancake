@@ -4,7 +4,8 @@
   "description": "Modern Data Structures for JS",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "build": "tsc -p tsconfig.json"
   },
   "keywords": [
     "data-structure",
@@ -21,11 +22,96 @@
   },
   "license": "GNU GPLv3",
   "devDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^3.0.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-security": "^1.4.0",
     "chai": "^4.2.0",
-    "mocha": "^6.2.1",
-    "nyc": "^14.1.1"
+    "mocha": "^8.2.1",
+    "np": "^7.0.0",
+    "nyc": "^15.1.0"
   },
-  "dependencies": {
-    "np": "^5.1.1"
+  "eslintConfig": {
+    "plugins": [
+      "node",
+      "security",
+      "@getify/proper-ternary"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:node/recommended",
+      "plugin:security/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:@getify/proper-ternary/getify-says"
+    ],
+    "env": {
+      "shared-node-browser": true,
+      "es6": true
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "as-needed",
+        {
+          "requireForBlockBody": true
+        }
+      ],
+      "one-var": "off",
+      "class-methods-use-this": "off",
+      "one-var-declaration-per-line": "off",
+      "consistent-return": "off",
+      "func-names": "off",
+      "max-len": "off",
+      "no-unused-expressions": "off",
+      "no-console": "off",
+      "no-shadow": [
+        "error",
+        {"hoist": "never"}
+      ],
+      "no-param-reassign": "off",
+      "no-prototype-builtins": "off",
+      "no-new": "off",
+      "newline-per-chained-call": "off",
+      "no-lonely-if": "error",
+      "no-new-object": "error",
+      "no-plusplus": "off",
+      "no-bitwise": "off",
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true,
+          "consistent": true
+        }
+      ],
+      "no-underscore-dangle": "off",
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ],
+      "object-shorthand": [
+        "error",
+        "consistent"
+      ],
+      "prefer-destructuring": "off",
+      "space-before-blocks": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "prefer-rest-params": "off",
+      "no-undef": "off",
+      "lines-between-class-members": "off",
+      "camelcase": "off",
+      "import/newline-after-import": "off",
+      "import/no-named-as-default": "off",
+      "import/extensions": "off",
+      "import/no-unresolved": "off",
+      "security/detect-object-injection": "off",
+      "@getify/proper-ternary/where": "off"
+    }
   }
 }
