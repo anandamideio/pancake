@@ -1,4 +1,4 @@
-class Queue {
+class Queue<T>{
   private count: number;
   private lowestCount: number;
   private items: {[key: number]: any};
@@ -9,17 +9,17 @@ class Queue {
     this.items = {};
   }
 
-  enqueue(element: any): void {
+  enqueue(element: T): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  add(element: any): void {
+  add(element: T): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  dequeue() {
+  dequeue(): undefined|T {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -27,7 +27,7 @@ class Queue {
     return result;
   }
 
-  remove() {
+  remove(): undefined|T {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -35,58 +35,51 @@ class Queue {
     return result;
   }
 
-  peek() {
+  peek(): undefined|T {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     return this.items[this.lowestCount];
   }
 
-  scry() {
+  scry(): undefined|T {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     return this.items[this.lowestCount];
   }
 
-  isEmpty() {
+  isEmpty(): boolean {
     return this.count - this.lowestCount === 0; // Returns true if empty and false otherwise
   }
 
-  size() {
+  size(): number {
     return this.count - this.lowestCount;
   }
 
-  length() {
+  length(): number {
     return this.count - this.lowestCount;
   }
 
-  clear() {
+  clear(): void {
     this.items = {};
     this.count = 0;
     this.lowestCount = 0;
   }
 
-  toString() {
-    if (this.isEmpty()) { return ''; } // Return blank if the queue is empty
-    let objString = `${this.items[this.lowestCount]}`;
+  toString(): string {
+    if (this.isEmpty()) return ''; // Return blank if the queue is empty
+    let objString: string = `${this.items[this.lowestCount]}`;
     for (let i = this.lowestCount +1; i < this.count; i++){
       objString = `${objString}, ${this.items[i]}`
     }
     return objString;
   }
 
-  toArray() {
-    let tempArray = [];
-    this.items.forEach((item) =>{
-      tempArray.push(item);
-    });
-    return tempArray;
-  }
+  forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void {
+    if (this == null) throw new TypeError('"this" is null or not defined');
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function');
 
-  forEach(callback, scope) {
-    if (this == null) {throw new TypeError('this is null or not defined')}
-    if (typeof callback !== 'function') {throw new TypeError((callback + ' is not a function'))}
-    let queueObject = Object(this); // Assign the results of 'this' to quequeObject
-    let queueLength = this.size(); // Get the queues length
-    let scopeArg, tempIterator = 0;
-    if (arguments.length > 1) { scopeArg = arguments[1] }
+    let queueObject = Object(this); // Assign the results of 'this' to queueObject
+    let queueLength: number = this.size(); // Get the queues length
+    let scopeArg, tempIterator: number = 0;
+    if (arguments.length > 1) scopeArg = arguments[1];
 
     while (tempIterator < queueLength) {
       let iteratorValue;
@@ -96,6 +89,14 @@ class Queue {
       }
       tempIterator += 1;
     }
+  }
+
+  toArray(): Array<T> {
+    let tempArray: Array<T> = [];
+    this.forEach((item) =>{
+      tempArray.push(item);
+    });
+    return tempArray;
   }
 }
 

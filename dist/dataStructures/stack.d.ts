@@ -1,11 +1,13 @@
-declare class Queue<T> {
+/**
+ * Stack
+ */
+declare class Stack<T> {
     private count;
-    private lowestCount;
     private items;
     constructor();
-    enqueue(element: T): void;
+    push(element: T): void;
     add(element: T): void;
-    dequeue(): undefined | T;
+    pop(): undefined | T;
     remove(): undefined | T;
     peek(): undefined | T;
     scry(): undefined | T;
@@ -13,7 +15,6 @@ declare class Queue<T> {
     size(): number;
     length(): number;
     clear(): void;
+    toArray(): [number, any][];
     toString(): string;
-    forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void;
-    toArray(): Array<T>;
 }

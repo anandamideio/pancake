@@ -1,17 +1,17 @@
-export declare class ArrayStack {
+export declare class ArrayStack<T> {
     private items;
     constructor();
-    push(element: any): void;
-    add(element: any): void;
-    pop(): any;
-    remove(): any;
-    peek(): any;
-    scry(): any;
+    push(element: T): void;
+    add(element: T): void;
+    pop(): undefined | T;
+    remove(): undefined | T;
+    peek(): undefined | T;
+    scry(): undefined | T;
     isEmpty(): boolean;
     size(): number;
     length(): number;
     clear(): void;
-    toArray(): any[];
+    toArray(): Array<T>;
     toString(): string;
 }
 export default ArrayStack;

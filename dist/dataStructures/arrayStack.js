@@ -12,17 +12,25 @@ class ArrayStack {
         this.items.push(element);
     }
     pop() {
+        if (this.isEmpty())
+            return undefined;
         return this.items.pop();
     }
     ;
     remove() {
+        if (this.isEmpty())
+            return undefined;
         return this.items.pop();
     }
     peek() {
+        if (this.isEmpty())
+            return undefined;
         return this.items[this.items.length - 1];
     }
     ;
     scry() {
+        if (this.isEmpty())
+            return undefined;
         return this.items[this.items.length - 1];
     }
     ;

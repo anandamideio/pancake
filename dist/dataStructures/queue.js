@@ -58,35 +58,24 @@ class Queue {
         this.lowestCount = 0;
     }
     toString() {
-        if (this.isEmpty()) {
-            return '';
-        } // Return blank if the queue is empty
+        if (this.isEmpty())
+            return ''; // Return blank if the queue is empty
         let objString = `${this.items[this.lowestCount]}`;
         for (let i = this.lowestCount + 1; i < this.count; i++) {
             objString = `${objString}, ${this.items[i]}`;
         }
         return objString;
     }
-    toArray() {
-        let tempArray = [];
-        this.items.forEach((item) => {
-            tempArray.push(item);
-        });
-        return tempArray;
-    }
-    forEach(callback, scope) {
-        if (this == null) {
-            throw new TypeError('this is null or not defined');
-        }
-        if (typeof callback !== 'function') {
-            throw new TypeError((callback + ' is not a function'));
-        }
-        let queueObject = Object(this); // Assign the results of 'this' to quequeObject
+    forEach(callback) {
+        if (this == null)
+            throw new TypeError('"this" is null or not defined');
+        if (typeof callback !== 'function')
+            throw new TypeError(callback + ' is not a function');
+        let queueObject = Object(this); // Assign the results of 'this' to queueObject
         let queueLength = this.size(); // Get the queues length
         let scopeArg, tempIterator = 0;
-        if (arguments.length > 1) {
+        if (arguments.length > 1)
             scopeArg = arguments[1];
-        }
         while (tempIterator < queueLength) {
             let iteratorValue;
             if (tempIterator in queueObject.items) {
@@ -95,6 +84,13 @@ class Queue {
             }
             tempIterator += 1;
         }
+    }
+    toArray() {
+        let tempArray = [];
+        this.forEach((item) => {
+            tempArray.push(item);
+        });
+        return tempArray;
     }
 }
 module.exports = Queue;

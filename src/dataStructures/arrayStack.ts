@@ -1,32 +1,36 @@
-export class ArrayStack {
-  private items: any[];
+export class ArrayStack<T> {
+  private items: Array<T>;
 
 
   constructor() {
     this.items = [];
   }
 
-  push(element: any): void {
+  push(element: T): void {
     this.items.push(element);
   };
 
-  add(element: any): void {
+  add(element: T): void {
     this.items.push(element);
   }
 
-  pop() {
+  pop(): undefined|T {
+    if (this.isEmpty()) return undefined;
     return this.items.pop();
   };
 
-  remove() {
+  remove(): undefined|T {
+    if (this.isEmpty()) return undefined;
     return this.items.pop();
   }
 
-  peek() {
+  peek(): undefined|T {
+    if (this.isEmpty()) return undefined;
     return this.items[this.items.length - 1];
   };
 
-  scry() {
+  scry(): undefined|T {
+    if (this.isEmpty()) return undefined;
     return this.items[this.items.length - 1];
   };
 
@@ -34,11 +38,11 @@ export class ArrayStack {
     return this.items.length === 0;
   };
 
-  size() {
+  size(): number {
     return this.items.length;
   };
 
-  length() {
+  length(): number {
     return this.items.length;
   }
 
@@ -46,11 +50,11 @@ export class ArrayStack {
     this.items = [];
   };
 
-  toArray() {
+  toArray(): Array<T> {
     return this.items;
   };
 
-  toString() {
+  toString(): string {
     return this.items.toString();
   };
 
