@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Stack
- */
 class Stack {
     constructor() {
         this.count = 0;

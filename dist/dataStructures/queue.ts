@@ -100,4 +100,4 @@ class Queue<T>{
   }
 }
 
-module.exports = Queue;
+export = Queue;

@@ -17,3 +17,4 @@ declare class Queue<T> {
     forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void;
     toArray(): Array<T>;
 }
+export = Queue;

@@ -1,6 +1,3 @@
-/**
- * Stack
- */
 class Stack<T> {
   private count: number;
   private items: {[key: string]: any};
@@ -78,4 +75,4 @@ class Stack<T> {
   }
 }
 
-module.exports = Stack;
+export = Stack;

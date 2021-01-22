@@ -14,3 +14,4 @@ declare class ArrayStack<T> {
     toArray(): Array<T>;
     toString(): string;
 }
+export = ArrayStack;

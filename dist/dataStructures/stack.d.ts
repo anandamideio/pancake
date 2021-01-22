@@ -1,6 +1,3 @@
-/**
- * Stack
- */
 declare class Stack<T> {
     private count;
     private items;
@@ -18,3 +15,4 @@ declare class Stack<T> {
     toArray(): [number, any][];
     toString(): string;
 }
+export = Stack;

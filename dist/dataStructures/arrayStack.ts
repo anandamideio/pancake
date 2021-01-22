@@ -57,4 +57,4 @@ class ArrayStack<T> {
     return this.items.toString();
   }
 }
-module.exports = ArrayStack;
+export = ArrayStack;
