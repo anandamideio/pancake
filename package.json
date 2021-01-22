@@ -1,6 +1,6 @@
 {
   "name": "anandamide-pancake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modern Data Structures for JS",
   "main": "index.js",
   "scripts": {
