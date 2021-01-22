@@ -1,14 +1,13 @@
-'use strict';
-
+"use strict";
 class Node {
-  constructor(key) {
-    this.key = key;
-    this.left = undefined;
-    this.right = undefined;
-  }
-
-  toString() {
-    return `${this.key}`;
-  }
+    constructor(key) {
+        this.key = key;
+        this.left = Node;
+        this.right = Node;
+    }
+    toString() {
+        return `${this.key}`;
+    }
 }
 module.exports = Node;
+//# sourceMappingURL=Node.js.map

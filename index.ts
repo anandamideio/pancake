@@ -1,4 +1,3 @@
-"use strict";
 const util = require('./dist/util');
 const Queue = require('./dist/dataStructures/queue');
 const Dequeue = require('./dist/dataStructures/dequeue');
@@ -22,29 +21,29 @@ const AVLTree = require('./dist/dataStructures/AdelsonVelskiiLandiTree');
 const RedBlackTree = require('./dist/dataStructures/redBlackTree');
 const Heap = require('./dist/dataStructures/heap');
 const Graph = require('./dist/dataStructures/graph');
+
 module.exports = {
-    util,
-    LinkedList,
-    Queue,
-    ArrayStack,
-    CircularLinkedList,
-    Dequeue,
-    Dictionary,
-    FixedDequeue,
-    FixedQueue,
-    Set,
-    Stack,
-    DoublyLinkedList,
-    LinkedListStack,
-    HashTable,
-    HashTableLinearProbingLazy,
-    HashTableLinearProbing,
-    HashTableSeparateChaining,
-    DoublyNode,
-    BinarySearchTree,
-    AVLTree,
-    RedBlackTree,
-    Heap,
-    Graph,
+  util,
+  LinkedList,
+  Queue,
+  ArrayStack,
+  CircularLinkedList,
+  Dequeue,
+  Dictionary,
+  FixedDequeue,
+  FixedQueue,
+  Set,
+  Stack,
+  DoublyLinkedList,
+  LinkedListStack,
+  HashTable,
+  HashTableLinearProbingLazy,
+  HashTableLinearProbing,
+  HashTableSeparateChaining,
+  DoublyNode,
+  BinarySearchTree,
+  AVLTree,
+  RedBlackTree,
+  Heap,
+  Graph,
 };
-//# sourceMappingURL=index.js.map
