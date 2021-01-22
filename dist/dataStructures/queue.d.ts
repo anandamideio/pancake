@@ -1,20 +1,21 @@
-declare class Queue<T> {
+declare class Queue {
     private count;
     private lowestCount;
     private items;
     constructor();
-    enqueue(element: T): void;
-    add(element: T): void;
-    dequeue(): undefined | T;
-    remove(): undefined | T;
-    peek(): undefined | T;
-    scry(): undefined | T;
+    enqueue(element: unknown): void;
+    add(element: unknown): void;
+    dequeue(): undefined | unknown;
+    remove(): undefined | unknown;
+    peek(): undefined | unknown;
+    scry(): undefined | unknown;
     isEmpty(): boolean;
     size(): number;
     length(): number;
     clear(): void;
     toString(): string;
-    forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void;
-    toArray(): Array<T>;
+    forEach(callback: (iteratorValue: unknown, tempIterator: number, queueItem: unknown) => any): void;
+    toArray(): Array<unknown>;
 }
 export = Queue;
+//# sourceMappingURL=queue.d.ts.map

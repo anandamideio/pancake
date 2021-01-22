@@ -76,11 +76,9 @@ module.exports = {
     'no-undef': 'off',
     'lines-between-class-members': 'off',
     camelcase: 'off',
-    'import/newline-after-import': 'off',
     'import/no-named-as-default': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
-    'security/detect-object-injection': 'off',
-    '@getify/proper-ternary/where': 'off',
+    'security/detect-object-injection': 'off'
   },
 };

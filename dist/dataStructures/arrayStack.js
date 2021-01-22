@@ -1,7 +1,7 @@
 "use strict";
 class ArrayStack {
     constructor() {
-        this.items = [];
+        this.items = new Array();
     }
     push(element) {
         this.items.push(element);

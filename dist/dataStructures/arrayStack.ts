@@ -2,7 +2,7 @@ class ArrayStack<T> {
   private items: Array<T>;
 
   constructor() {
-    this.items = [];
+    this.items = new Array<T>();
   }
 
   push(element: T): void {

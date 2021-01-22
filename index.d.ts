@@ -7,3 +7,4 @@ declare const _default: {
     Queue: typeof Queue;
 };
 export = _default;
+//# sourceMappingURL=index.d.ts.map

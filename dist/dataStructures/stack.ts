@@ -1,23 +1,23 @@
-class Stack<T> {
+class Stack {
   private count: number;
-  private items: {[key: string]: any};
+  private items: {[key: string]: unknown};
 
   constructor() {
     this.count = 0;
     this.items = {};
   }
 
-  push(element: T): void {
+  push(element: unknown): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  add(element: T): void {
+  add(element: unknown): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  pop(): undefined|T {
+  pop(): undefined|unknown {
     if (this.isEmpty()) return undefined;
     this.count -= 1;
     const result = this.items[this.count];
@@ -25,7 +25,7 @@ class Stack<T> {
     return result;
   }
 
-  remove(): undefined|T {
+  remove(): undefined|unknown {
     if (this.isEmpty()) return undefined;
     this.count -= 1;
     const result = this.items[this.count];
@@ -33,12 +33,12 @@ class Stack<T> {
     return result;
   }
 
-  peek(): undefined|T {
+  peek(): undefined|unknown {
     if (this.isEmpty()) return undefined;
     return this.items[this.count - 1];
   }
 
-  scry(): undefined|T {
+  scry(): undefined|unknown {
     if (this.isEmpty()) return undefined;
     return this.items[this.count - 1];
   }
@@ -61,8 +61,8 @@ class Stack<T> {
   }
 
   toArray() {
-    const itemStore: { [p: string]: any } = this.items;
-    return Object.keys(this.items).map((key: string): [number, any] => [Number(key), itemStore[key]]);
+    const itemStore: { [p: string]: unknown } = this.items;
+    return Object.keys(this.items).map((key: string): [number, unknown] => [Number(key), itemStore[key]]);
   }
 
   toString(): string {

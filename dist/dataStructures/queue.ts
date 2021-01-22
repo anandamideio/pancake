@@ -1,7 +1,7 @@
-class Queue<T>{
+class Queue {
   private count: number;
   private lowestCount: number;
-  private items: {[key: number]: any};
+  private items: {[key: number]: unknown};
 
   constructor() {
     this.count = 0;
@@ -9,17 +9,17 @@ class Queue<T>{
     this.items = {};
   }
 
-  enqueue(element: T): void {
+  enqueue(element: unknown): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  add(element: T): void {
+  add(element: unknown): void {
     this.items[this.count] = element;
     this.count += 1;
   }
 
-  dequeue(): undefined|T {
+  dequeue(): undefined|unknown {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -27,7 +27,7 @@ class Queue<T>{
     return result;
   }
 
-  remove(): undefined|T {
+  remove(): undefined|unknown {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -35,12 +35,12 @@ class Queue<T>{
     return result;
   }
 
-  peek(): undefined|T {
+  peek(): undefined|unknown {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     return this.items[this.lowestCount];
   }
 
-  scry(): undefined|T {
+  scry(): undefined|unknown {
     if (this.isEmpty()) { return undefined; } // Return undefined if the queue is empty
     return this.items[this.lowestCount];
   }
@@ -72,7 +72,7 @@ class Queue<T>{
     return objString;
   }
 
-  forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void {
+  forEach(callback: (iteratorValue: unknown, tempIterator: number, queueItem: unknown) => any): void {
     if (this == null) throw new TypeError('"this" is null or not defined');
     if (typeof callback !== 'function') throw new TypeError(`${callback} is not a function`);
 
@@ -91,9 +91,9 @@ class Queue<T>{
     }
   }
 
-  toArray(): Array<T> {
-    const tempArray: Array<T> = [];
-    this.forEach((item: T): void => {
+  toArray(): Array<unknown> {
+    const tempArray: Array<unknown> = [];
+    this.forEach((item: unknown): void => {
       tempArray.push(item);
     });
     return tempArray;

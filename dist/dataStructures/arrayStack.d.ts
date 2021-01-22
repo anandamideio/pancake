@@ -15,3 +15,4 @@ declare class ArrayStack<T> {
     toString(): string;
 }
 export = ArrayStack;
+//# sourceMappingURL=arrayStack.d.ts.map
