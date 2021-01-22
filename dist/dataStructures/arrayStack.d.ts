@@ -1,4 +1,4 @@
-export declare class ArrayStack<T> {
+declare class ArrayStack<T> {
     private items;
     constructor();
     push(element: T): void;
@@ -14,4 +14,3 @@ export declare class ArrayStack<T> {
     toArray(): Array<T>;
     toString(): string;
 }
-export default ArrayStack;

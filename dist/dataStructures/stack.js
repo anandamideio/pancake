@@ -11,7 +11,6 @@ class Stack {
         this.items[this.count] = element;
         this.count += 1;
     }
-    ;
     add(element) {
         this.items[this.count] = element;
         this.count += 1;
@@ -24,7 +23,6 @@ class Stack {
         delete this.items[this.count];
         return result;
     }
-    ;
     remove() {
         if (this.isEmpty())
             return undefined;
@@ -38,21 +36,17 @@ class Stack {
             return undefined;
         return this.items[this.count - 1];
     }
-    ;
     scry() {
         if (this.isEmpty())
             return undefined;
         return this.items[this.count - 1];
     }
-    ;
     isEmpty() {
         return this.count === 0;
     }
-    ;
     size() {
         return this.count;
     }
-    ;
     length() {
         return this.count;
     }
@@ -60,12 +54,9 @@ class Stack {
         this.items = {};
         this.count = 0;
     }
-    ;
     toArray() {
-        let itemStore = this.items;
-        return Object.keys(this.items).map(function (key) {
-            return [Number(key), itemStore[key]];
-        });
+        const itemStore = this.items;
+        return Object.keys(this.items).map((key) => [Number(key), itemStore[key]]);
     }
     toString() {
         if (this.isEmpty())
@@ -76,7 +67,6 @@ class Stack {
         }
         return objString;
     }
-    ;
 }
 module.exports = Stack;
 //# sourceMappingURL=stack.js.map

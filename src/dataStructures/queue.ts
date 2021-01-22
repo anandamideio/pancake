@@ -65,20 +65,20 @@ class Queue<T>{
 
   toString(): string {
     if (this.isEmpty()) return ''; // Return blank if the queue is empty
-    let objString: string = `${this.items[this.lowestCount]}`;
-    for (let i = this.lowestCount +1; i < this.count; i++){
-      objString = `${objString}, ${this.items[i]}`
+    let objString = `${this.items[this.lowestCount]}`;
+    for (let i = this.lowestCount + 1; i < this.count; i++){
+      objString = `${objString}, ${this.items[i]}`;
     }
     return objString;
   }
 
   forEach(callback: (iteratorValue: T, tempIterator: number, queueItem: T) => any): void {
     if (this == null) throw new TypeError('"this" is null or not defined');
-    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== 'function') throw new TypeError(`${callback} is not a function`);
 
-    let queueObject = Object(this); // Assign the results of 'this' to queueObject
-    let queueLength: number = this.size(); // Get the queues length
-    let scopeArg, tempIterator: number = 0;
+    const queueObject = Object(this); // Assign the results of 'this' to queueObject
+    const queueLength: number = this.size(); // Get the queues length
+    let scopeArg, tempIterator = 0;
     if (arguments.length > 1) scopeArg = arguments[1];
 
     while (tempIterator < queueLength) {
@@ -92,8 +92,8 @@ class Queue<T>{
   }
 
   toArray(): Array<T> {
-    let tempArray: Array<T> = [];
-    this.forEach((item) =>{
+    const tempArray: Array<T> = [];
+    this.forEach((item: T): void => {
       tempArray.push(item);
     });
     return tempArray;

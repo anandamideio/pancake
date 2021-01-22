@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class ArrayStack {
     constructor() {
         this.items = [];
@@ -7,7 +6,6 @@ class ArrayStack {
     push(element) {
         this.items.push(element);
     }
-    ;
     add(element) {
         this.items.push(element);
     }
@@ -16,7 +14,6 @@ class ArrayStack {
             return undefined;
         return this.items.pop();
     }
-    ;
     remove() {
         if (this.isEmpty())
             return undefined;
@@ -27,37 +24,29 @@ class ArrayStack {
             return undefined;
         return this.items[this.items.length - 1];
     }
-    ;
     scry() {
         if (this.isEmpty())
             return undefined;
         return this.items[this.items.length - 1];
     }
-    ;
     isEmpty() {
         return this.items.length === 0;
     }
-    ;
     size() {
         return this.items.length;
     }
-    ;
     length() {
         return this.items.length;
     }
     clear() {
         this.items = [];
     }
-    ;
     toArray() {
         return this.items;
     }
-    ;
     toString() {
         return this.items.toString();
     }
-    ;
 }
-exports.ArrayStack = ArrayStack;
-exports.default = ArrayStack;
+module.exports = ArrayStack;
 //# sourceMappingURL=arrayStack.js.map

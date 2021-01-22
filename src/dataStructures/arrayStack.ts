@@ -1,6 +1,5 @@
-export class ArrayStack<T> {
+class ArrayStack<T> {
   private items: Array<T>;
-
 
   constructor() {
     this.items = [];
@@ -8,7 +7,7 @@ export class ArrayStack<T> {
 
   push(element: T): void {
     this.items.push(element);
-  };
+  }
 
   add(element: T): void {
     this.items.push(element);
@@ -17,7 +16,7 @@ export class ArrayStack<T> {
   pop(): undefined|T {
     if (this.isEmpty()) return undefined;
     return this.items.pop();
-  };
+  }
 
   remove(): undefined|T {
     if (this.isEmpty()) return undefined;
@@ -27,20 +26,20 @@ export class ArrayStack<T> {
   peek(): undefined|T {
     if (this.isEmpty()) return undefined;
     return this.items[this.items.length - 1];
-  };
+  }
 
   scry(): undefined|T {
     if (this.isEmpty()) return undefined;
     return this.items[this.items.length - 1];
-  };
+  }
 
   isEmpty(): boolean {
     return this.items.length === 0;
-  };
+  }
 
   size(): number {
     return this.items.length;
-  };
+  }
 
   length(): number {
     return this.items.length;
@@ -48,15 +47,14 @@ export class ArrayStack<T> {
 
   clear(): void {
     this.items = [];
-  };
+  }
 
   toArray(): Array<T> {
     return this.items;
-  };
+  }
 
   toString(): string {
     return this.items.toString();
-  };
-
+  }
 }
-export default ArrayStack;
+module.exports = ArrayStack;

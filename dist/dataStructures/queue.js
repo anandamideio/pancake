@@ -70,9 +70,9 @@ class Queue {
         if (this == null)
             throw new TypeError('"this" is null or not defined');
         if (typeof callback !== 'function')
-            throw new TypeError(callback + ' is not a function');
-        let queueObject = Object(this); // Assign the results of 'this' to queueObject
-        let queueLength = this.size(); // Get the queues length
+            throw new TypeError(`${callback} is not a function`);
+        const queueObject = Object(this); // Assign the results of 'this' to queueObject
+        const queueLength = this.size(); // Get the queues length
         let scopeArg, tempIterator = 0;
         if (arguments.length > 1)
             scopeArg = arguments[1];
@@ -86,7 +86,7 @@ class Queue {
         }
     }
     toArray() {
-        let tempArray = [];
+        const tempArray = [];
         this.forEach((item) => {
             tempArray.push(item);
         });
