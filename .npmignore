@@ -91,7 +91,6 @@ out
 
 # Ignore Nuxt.js build / generate output
 .nuxt
-dist
 
 # Ignore Gatsby files
 .cache/
