@@ -4,7 +4,7 @@ export interface AbstractNode {
 }
 
 export class Node<K> implements AbstractNode {
-  public value: unknown;
+  public value: K;
   public next: AbstractNode | null;
   public prev: AbstractNode | null;
 
@@ -13,12 +13,13 @@ export class Node<K> implements AbstractNode {
     this.next = null;
     this.prev = null;
   }
+
   toString(): string {
-    return `${this.value}`;
+    return `Node(${this.value})`;
   }
 }
 
-class HeadNode implements AbstractNode {
+export class HeadNode implements AbstractNode {
   public next: AbstractNode | null;
 
   constructor() {
@@ -26,7 +27,7 @@ class HeadNode implements AbstractNode {
   }
 }
 
-class TailNode implements AbstractNode {
+export class TailNode implements AbstractNode {
   public prev: AbstractNode | null;
 
   constructor() {
@@ -34,5 +35,3 @@ class TailNode implements AbstractNode {
   }
 }
 
-export {HeadNode, TailNode};
-export default Node;

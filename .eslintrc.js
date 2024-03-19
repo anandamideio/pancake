@@ -1,6 +1,11 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: './tsconfig.json',
+    ecmaVersion: 'latest',
+  },
   plugins: [
     '@typescript-eslint',
     'node',
@@ -29,12 +34,10 @@ module.exports = {
       },
     ],
     'one-var': 'off',
-    'class-methods-use-this': 'off',
     'one-var-declaration-per-line': 'off',
     'consistent-return': 'off',
     'func-names': 'off',
     'max-len': 'off',
-    'no-unused-expressions': 'off',
     'no-console': 'off',
     'no-shadow': [
       'error',
@@ -66,19 +69,9 @@ module.exports = {
       'error',
       'consistent',
     ],
-    'prefer-destructuring': 'off',
-    'space-before-blocks': 'off',
     'space-before-function-paren': [
       'error',
       'never',
     ],
-    'prefer-rest-params': 'off',
-    'no-undef': 'off',
-    'lines-between-class-members': 'off',
-    camelcase: 'off',
-    'import/no-named-as-default': 'off',
-    'import/extensions': 'off',
-    'import/no-unresolved': 'off',
-    'security/detect-object-injection': 'off'
   },
 };
