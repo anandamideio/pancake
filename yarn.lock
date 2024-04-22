@@ -722,7 +722,7 @@ __metadata:
     eslint-import-resolver-node: "npm:^0.3.9"
     eslint-plugin-import: "npm:2.29.1"
     eslint-plugin-node: "npm:^11.1.0"
-    eslint-plugin-security: "npm:^2.1.1"
+    eslint-plugin-security: "npm:^3.0.0"
     mocha: "npm:^10.3.0"
     nyc: "npm:^15.1.0"
     typescript: "npm:^5.4.2"
@@ -1655,12 +1655,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-security@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "eslint-plugin-security@npm:2.1.1"
+"eslint-plugin-security@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "eslint-plugin-security@npm:3.0.0"
   dependencies:
     safe-regex: "npm:^2.1.1"
-  checksum: 10c0/85e8f86a9e870db9418e2a1511278ec3d3bc6cdfbbb8f26822bf8d16b909555eab94e26f257ef516d8d05cb56eca76230d909c357e23e21df0e5271973697820
+  checksum: 10c0/b7fe64fa912224bb2f5a2d112708320dada5a2b04a19e24384f2bc543fa10363955f93ed8eec70cc1af5319cb15932b1db402809167f301c31555022b2fd5638
   languageName: node
   linkType: hard
 
