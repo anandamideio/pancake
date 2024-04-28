@@ -13,6 +13,8 @@
     "**/CVS": false,
     "**/.DS_Store": false,
     "**/Thumbs.db": false,
+    "**/.*": false,
+    "eslint*.*": false,
     ".idea": false,
     ".vscode": false
   },
