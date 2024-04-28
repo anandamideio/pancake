@@ -116,6 +116,10 @@ out
 # Ignore yarn v2
 .pnp.*
 .yarn/*
-
-
 src/
+.gitignore
+tsconfig.json
+.git
+.github
+.vscode
+examples/

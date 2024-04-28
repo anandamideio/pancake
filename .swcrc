@@ -1,0 +1,29 @@
+[
+  {
+    "$schema": "https://json.schemastore.org/swcrc",
+    "test": ".*\\.ts$",
+    "jsc": {
+      "parser": {
+        "syntax": "typescript"
+      },
+      "target": "es2022",
+      "keepClassNames": true
+    },
+    "module": { "type": "es6" },
+    "sourceMaps": true,
+    "minify": true
+  },
+  {
+    "$schema": "https://json.schemastore.org/swcrc",
+    "test": ".*\\.js$",
+    "jsc": {
+      "parser": {
+        "syntax": "ecmascript"
+      },
+      "target": "es2022"
+    },
+    "module": { "type": "es6" },
+    "sourceMaps": true,
+    "minify": true
+  }
+]
