@@ -19,47 +19,18 @@
     "Author": "Antonio Bourassa - Abourass - https://github.com/Abourass",
     "Co-Author": "Kyle Hagadorn - KyleHagad - https://github.com/KyleHagad"
   },
-  "exports": {
-    "arrayStack": {
-      "import": "./dist/dataStructures/arrayStack.mjs",
-      "require": "./dist/dataStructures/arrayStack.cjs"
-    },
-    "queue": {
-      "import": "./dist/dataStructures/queue.mjs",
-      "require": "./dist/dataStructures/queue.cjs"
-    },
-    "stack": {
-      "import": "./dist/dataStructures/stack.mjs",
-      "require": "./dist/dataStructures/stack.cjs"
-    },
-    "redBlackNode": {
-      "import": "./dist/dataStructures/models/redBlackNode.mjs",
-      "require": "./dist/dataStructures/models/redBlackNode.cjs"
-    }
-  },
-  "main": "./dist",
-  "types": "./dist",
   "files": [
     "dist"
   ],
   "license": "MIT",
   "devDependencies": {
-    "@getify/eslint-plugin-proper-ternary": "^3.1.1",
+    "@eslint/js": "^9.1.1",
     "@magik_io/lint_golem": "^1.4.0",
     "@swc/cli": "^0.3.12",
     "@swc/core": "^1.4.17",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
-    "chai": "^5.1.0",
     "eslint": "^9.1.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-import-resolver-node": "^0.3.9",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-security": "^3.0.0",
-    "mocha": "^10.4.0",
-    "nyc": "^15.1.0",
     "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
     "unbuild": "^2.0.0",
     "vitest": "^1.5.2"
   },
